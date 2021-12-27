@@ -1,6 +1,8 @@
 package tasks;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.SendKeys;
@@ -19,7 +21,9 @@ public class LoginToEriBank implements Task {
         this.password = password;
     }
 
-
+    public static Performable CatchPopUp() {
+        return Click.on(By.id("android:id/button1")); //android:id/button1
+    }
     @Override
     @Step("{0} logins to the eribank")
     public <T extends Actor> void performAs(T actor) {
