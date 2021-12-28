@@ -1,8 +1,6 @@
 package tasks;
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.Consequence;
 import net.serenitybdd.screenplay.targets.Target;
-
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.containsText;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;

@@ -32,7 +32,7 @@ public class PaymentForm implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(enumCountry.setElement(this.country.toUpperCase()));
         if (countryPage){
-            actor.attemptsTo(Click.on(PaymentPageElements.COUNTRY_BTN),touchAction.down(100,2000));
+            actor.attemptsTo(Click.on(PaymentPageElements.COUNTRY_BTN),touchAction.down(2000));
         }else  actor.attemptsTo(Click.on(PaymentPageElements.COUNTRY_BTN));
         actor.attemptsTo(
                 setCountryElement.setElement(this.country),

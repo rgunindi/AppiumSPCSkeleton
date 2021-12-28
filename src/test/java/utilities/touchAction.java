@@ -17,8 +17,8 @@ public class touchAction implements Task {
     TouchAction action = new TouchAction((MobileDriver)driver) ;
     static PointOption pointOptionStart;
     static PointOption pointOptionEnd;
-    public static touchAction down(int start,int end){
-        pointOptionStart = PointOption.point(100, end);
+    public static touchAction down(int end){
+        pointOptionStart = PointOption.point(100, end); //End<Start olmali.Down
         pointOptionEnd = PointOption.point(100, 400);
         return instrumented(touchAction.class);
     }
@@ -30,6 +30,5 @@ public class touchAction implements Task {
         action.moveTo(pointOptionEnd);
         action.release();
         action.perform();
-        //down();
     }
 }

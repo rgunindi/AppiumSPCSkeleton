@@ -1,4 +1,5 @@
 /target
 *.swp
-.idea
+/.idea
 *.DS_Store
+/src/test/java/garbageThoughts

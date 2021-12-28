@@ -13,9 +13,6 @@ import tasks.LoginToEriBank;
 import tasks.PaymentForm;
 import tasks.PaymentPage;
 import ui.Balance;
-import ui.PaymentPageElements;
-
-import static java.lang.Integer.parseInt;
 
 public class paymentSteps {
     @Managed(driver = "Appium")
