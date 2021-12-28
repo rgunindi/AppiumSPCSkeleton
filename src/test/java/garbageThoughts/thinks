@@ -1,0 +1,34 @@
+
+    //Iterator Xpath Element For Country
+//    private static String country="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ListView/android.widget.TextView";
+//    @Step("Country Field")
+//    public static Performable CountrySelect(String COUNTRY){
+//
+//        for (int i=1;i<=11;i++){
+//
+//            countryXpath=country+"["+i+"]";
+//            String cntryName= getDriver().findElement(By.xpath(countryXpath)).getText();
+//            if (cntryName==COUNTRY)
+//            {
+//                break;
+//            }
+//        }
+//        return null;
+//    }
+//
+//    public PaymentPageElements(String COUNTRY){
+//        //this.country=countryXpath;
+//        COUNTRY= PaymentPageElements.getCountry_name();
+//        for (int i=1;i<=11;i++){
+//            countryXpath=country+"["+i+"]";
+//            String cntryName= getDriver().findElement(By.xpath(countryXpath)).getText();
+//            if (cntryName==COUNTRY)
+//            {
+//                break;
+//            }
+//        }
+//    }
+    //    public static final Target SELECT_COUNTRY = Target.the("SELECT COUNTRY field")
+//            .located(By.id("countryButton"));
+//    public static final Target COUNTRY = Target.the("COUNTRY field")
+//            .locatedBy((countryXpath+"[11]"));

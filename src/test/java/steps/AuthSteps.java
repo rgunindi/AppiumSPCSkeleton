@@ -50,7 +50,7 @@ public class AuthSteps {
     }
 
     @Then("you should see the home page")
-    public void you_should_see_the_home_page() {
+    public void you_should_see_the_home_page() throws InterruptedException {
         actor.should(HomePage.validate());
     }
 }

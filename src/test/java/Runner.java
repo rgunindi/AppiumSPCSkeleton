@@ -8,8 +8,7 @@ import java.io.IOException;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features"
-        //,//tags ="@seach_film"
-        //tags ="@auth_incorrect"
+        //,tags ="@payment"
 )
 
 public class Runner {

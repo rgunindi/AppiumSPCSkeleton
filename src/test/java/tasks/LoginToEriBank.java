@@ -22,7 +22,7 @@ public class LoginToEriBank implements Task {
     }
 
     public static Performable CatchPopUp() {
-        return Click.on(By.id("android:id/button1")); //android:id/button1
+        return Click.on(By.id("android:id/button1"));
     }
     @Override
     @Step("{0} logins to the eribank")
