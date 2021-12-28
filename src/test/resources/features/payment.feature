@@ -22,4 +22,5 @@ Feature: make a payment to three different client
       | Canada    |    | 10 |    | 5557891501|    | Isac         |
       | USA       |    | 20 |    | 5303241302|    | Einstein     |
       | JAPAN     |    | 30 |    | 5451841501|    | Frankenstein |
+      | New Zealand |  | 100 |   | 9541841501|    | Hezarfen |
 

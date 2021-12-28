@@ -4,6 +4,10 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.thucydides.core.annotations.Step;
 import ui.PaymentPageElements;
+import utilities.enumCountry;
+import utilities.setCountryElement;
+import utilities.touchAction;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class PaymentForm implements Task {
@@ -11,8 +15,8 @@ public class PaymentForm implements Task {
     private static String amount;
     private static String phone;
     private static String name;
+    private static Boolean countryPage=false;
     public PaymentForm(String country, String amount, String phone, String name) {
-
         PaymentForm.country = country;
         PaymentForm.amount = amount;
         PaymentForm.phone = phone;
@@ -26,9 +30,12 @@ public class PaymentForm implements Task {
     @Override
     @Step("Payment Form Filling")
     public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(enumCountry.setElement(this.country.toUpperCase()));
+        if (countryPage){
+            actor.attemptsTo(Click.on(PaymentPageElements.COUNTRY_BTN),touchAction.down(100,2000));
+        }else  actor.attemptsTo(Click.on(PaymentPageElements.COUNTRY_BTN));
         actor.attemptsTo(
-                Click.on(PaymentPageElements.COUNTRY_FIELD),
-                SendKeys.of(this.country).into(PaymentPageElements.COUNTRY_FIELD),
+                setCountryElement.setElement(this.country),
                 Click.on(PaymentPageElements.AMOUNT),
                 SendKeys.of(this.amount).into(PaymentPageElements.AMOUNT),
                 Click.on(PaymentPageElements.PHONE),
@@ -38,5 +45,8 @@ public class PaymentForm implements Task {
                 Click.on(PaymentPageElements.SEND_PAYMENT),
                 Click.on(PaymentPageElements.YES)
         );
+    }
+    public static void CountryiD(int countryName){
+        countryPage=countryName>=11?true:false;
     }
 }
